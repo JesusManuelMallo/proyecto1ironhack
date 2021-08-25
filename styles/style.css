@@ -1,0 +1,52 @@
+body {
+  padding: 0;
+  text-align: center;
+  background-image: "../images/fondoweb.jpg";
+  background-color: rgb(0, 2, 122);
+}
+
+.game-intro {
+  float: left;
+  padding: 0% 10%;
+}
+
+.game-intro p {
+  font-size: 18px;
+  font-family: "Verdana";
+}
+
+.logo-img {
+  width: 350px;
+}
+
+.arrows-img {
+  width: 150px;
+}
+
+body button {
+  font-size: 30px;
+  background-color: #9bf110;
+  color: #000;
+  padding: 20px 40px;
+  border: 0;
+  box-shadow: 0;
+  border-radius: 50px;
+  margin-bottom: 20px;
+  transition: all 1s linear;
+}
+
+#game-board {
+  float: left;
+  padding: 20px 0px;
+}
+
+.police {
+  opacity: 0;
+
+  transition: all 5s linear;
+}
+
+.police.on {
+  opacity: 1;
+  display: block;
+}
