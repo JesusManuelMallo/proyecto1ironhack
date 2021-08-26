@@ -1,8 +1,13 @@
+* {
+  color: white;
+}
+
 body {
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: black;
+  color: white;
 }
 
 .centro {
@@ -22,6 +27,16 @@ body {
 .centro > img {
   width: 64px;
   height: 64px;
+}
+
+.branding {
+  color: white;
+}
+h1 {
+  color: white;
+}
+p h1 {
+  color: white;
 }
 
 p {
