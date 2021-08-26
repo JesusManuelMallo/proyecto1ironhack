@@ -1,0 +1,29 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+}
+
+.centro {
+  width: 500px;
+  height: 500px;
+  background-image: url("../images/fondoanimado.gif");
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.a {
+  text-decoration: none;
+}
+
+.centro > img {
+  width: 64px;
+  height: 64px;
+}
+
+p {
+  color: white;
+}
