@@ -47,6 +47,6 @@ class Disparo {
   }
 
   moveDisparo() {
-    this.y -= 8;
+    this.y -= 6;
   }
 }

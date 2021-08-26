@@ -25,7 +25,7 @@ const raceCarApp = {
 
   setCanvasDimensions(canvas) {
     this.canvasSize.w = 540;
-    this.canvasSize.h = 650;
+    this.canvasSize.h = 660;
     canvas.setAttribute("width", this.canvasSize.w);
     canvas.setAttribute("height", this.canvasSize.h);
   },
@@ -66,6 +66,7 @@ const raceCarApp = {
       this.checkIfCollision();
       this.clearCanvas();
       this.drawAll();
+      this.checkHit();
 
       this.newCar.move();
       if (this.arrayDisparos.length !== 0) {
@@ -104,8 +105,8 @@ const raceCarApp = {
   createObstacle() {
     /* const randomWidth = Math.trunc(Math.random() * (300 - 100) + 100); 
     const randomHeight = Math.trunc(Math.random() * (100 - 70) + 70); */
-    const randomWidth = 64;
-    const randomHeight = 64;
+    const randomWidth = 60;
+    const randomHeight = 60;
     const xRandomPosition = Math.trunc(
       Math.random() * (this.canvasSize.w - 100) //***1 explicacion para que aparezcan desde lugares random
     );
@@ -160,6 +161,32 @@ const raceCarApp = {
         ) {
           clearInterval(this.intervalId);
         }
+      });
+    }
+  },
+
+  checkHit() {
+    if (this.obstacles.length) {
+      this.obstacles.forEach((obstacle, obstacleIndex) => {
+        this.arrayDisparos.forEach((laser) => {
+          console.log(laser.y);
+          console.log(obstacle.obstaclePosition.y);
+          console.log("-------------");
+          if (
+            laser.y + 50 > obstacle.obstaclePosition.y &&
+            laser.y - 50 < obstacle.obstaclePosition.y
+          ) {
+            debugger;
+          }
+          if (
+            obstacle.obstaclePosition.x < laser.x + laser.y &&
+            obstacle.obstaclePosition.x + obstacle.obstacleSize.w > laser.x &&
+            obstacle.obstaclePosition.y - obstacle.obstacleSize.h < laser.y &&
+            obstacle.obstacleSize.h + obstacle.obstaclePosition.y > laser.y
+          ) {
+            this.obstacles.splice(obstacleIndex, 1);
+          }
+        });
       });
     }
   },
