@@ -54,3 +54,28 @@ body button {
 p {
   color: red;
 }
+
+.branding {
+  background: greenyellow
+  color: red;
+}
+.centro > img {
+  width: 64px;
+  height: 64px;
+}
+
+h1 > .branding {
+  color: white;
+  background: greenyellow;
+}
+h1 {
+  color: white;
+  background: yellowgreen;
+}
+p h1 {
+  color: white;
+}
+
+p {
+  color: white;
+}

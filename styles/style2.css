@@ -24,16 +24,22 @@ body {
   text-decoration: none;
 }
 
+.branding {
+  background: yellow;
+  color: red;
+}
 .centro > img {
   width: 64px;
   height: 64px;
 }
 
-.branding {
+h1 > .branding {
   color: white;
+  background: greenyellow;
 }
 h1 {
   color: white;
+  background: yellowgreen;
 }
 p h1 {
   color: white;

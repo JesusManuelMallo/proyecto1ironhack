@@ -78,7 +78,7 @@ const raceCarApp = {
       this.framesCounter++;
 
       if (this.framesCounter % 200 === 0) {
-        this.score++;
+        /////aquí aumenta mas uno el SCORE!!!!SCORE!!!SCORE!!!!!!!!!!!!!!!!!!!!!!!!!!!!
       }
 
       if (this.framesCounter % 100 === 0) {
@@ -176,7 +176,6 @@ const raceCarApp = {
             laser.y + 50 > obstacle.obstaclePosition.y &&
             laser.y - 50 < obstacle.obstaclePosition.y
           ) {
-            debugger;
           }
           if (
             obstacle.obstaclePosition.x < laser.x + laser.y &&
@@ -185,6 +184,7 @@ const raceCarApp = {
             obstacle.obstacleSize.h + obstacle.obstaclePosition.y > laser.y
           ) {
             this.obstacles.splice(obstacleIndex, 1);
+            this.score++;
           }
         });
       });
